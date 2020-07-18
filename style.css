@@ -85,7 +85,8 @@ body {
   font-family: fantasy;
 }
 
-.rainbow {
+.rainbow,
+.clouds {
   position: absolute;
   margin: -170px 10px 80px 500px;
 }
@@ -94,4 +95,11 @@ body {
   color: blue;
   font-size: larger;
   font-family: fantasy;
+}
+.active {
+  color: black;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
 }

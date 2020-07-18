@@ -24,18 +24,25 @@ function formatDate(date) {
 }
 
 function displayWeatherCondition(response) {
-  console.log(response.data);
+  console.log(response);
   document.querySelector("#cityTemp").innerHTML = response.data.name;
+  let temperatureElement = document.querySelector("#temperature");
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].main.description;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
+
 function searchCity(city) {
   let apiKey = "6ef1e8464c3d2cf1f0b480456f49e6c9";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -67,15 +74,22 @@ dateElement.innerHTML = formatDate(currentTime);
 
 function convertToFahrenheit(event) {
   event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
 }
+
+let celsiusTemperature = null;
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
@@ -88,8 +102,6 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 function showCityTemp(response) {
   let temperature = Math.round(response.data.main.temp);
-  console.log(temperature);
-  console.log(response);
   let city = response.data.name;
   let message = `It is ${temperature} degrees in ${city}`;
   let Citytemp = document.querySelector("CityTemp");
