@@ -81,7 +81,6 @@ button {
 }
 
 body {
-  background-image: linear-gradient(-225deg, #b7f8db 0%, #50a7c2 100%);
   font-family: fantasy;
 }
 
@@ -102,4 +101,7 @@ body {
 }
 .active:hover {
   text-decoration: none;
+}
+.container {
+  background-image: url(https://images.pexels.com/photos/3551227/pexels-photo-3551227.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
 }
