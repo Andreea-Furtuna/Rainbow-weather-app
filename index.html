@@ -37,7 +37,7 @@
                     id="fahrenheit-link"> <strong>°F </strong></a> </span>
         </div>
         <br />
-        <div class="col-6">
+        <div class="col-3">
             <form class="search-form" id="search-form">
                 Type your city here →
                 <input type="text" placeholder="Enter your city" class="paris" id="city-input" />
@@ -45,18 +45,25 @@
         </div>
         <div class="col-6">
             <button id="current-location-button">Current</button></div>
-        <br />
-        <div class="col-6">
+    </div>
+    <div class="row weather-description">
+        <div class="col-4">
             <ul>
                 <li id="description" class="description"></li>
-                <li>Humidity:<span id="humidity"></span>%</li>
-                <li>Wind:<span id="wind"></span>km/h</li>
             </ul>
+                <div class="col-4">
+                    <ul>
+                <li>Humidity:<span id="humidity"></span>%</li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul>
+                <li>Wind:<span id="wind"></span>km/h</li>
+                </ul>
+                </div>
+            </div>
         </div>
         <br />
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSu98ZiNQ75-J-GABlQZJFiRsUsXJk10zJ6YA&usqp=CAU"
-            alt="sunbehindthecloud" class="rainbow"/>
-        <img src="https://paytechlaw.com/wp-content/uploads/181128_Cloud-Dienste_DE_ENG.png" alt="clouds" class="clouds" width="100px"/>
         </form>
         <div class="row">
             <div class="col">
@@ -80,7 +87,6 @@
                             </p>
                             <ul>
                                 <li>19°C⛅</li>
-
                             </ul>
                         </div>
                     </div>
@@ -94,7 +100,6 @@
                                 </p>
                                 <ul>
                                     <li>19°C🌧️</li>
-
                                 </ul>
                             </div>
                         </div>
@@ -108,7 +113,6 @@
                                     </p>
                                     <ul>
                                         <li>20°C🌧️</li>
-
                                     </ul>
                                 </div>
                             </div>
@@ -122,11 +126,13 @@
                                         </p>
                                         <ul>
                                             <li>20°C⛅</li>
-
                                         </ul>
                                     </div>
-                                    </div>
-                                    </div>
-                <script src="index.js"></script>
-           </body>
+                                </div>
+                                </div>
+                                </div>
+</div>
+                            </div>
+                            <script src="index.js"></script>
+                            </body>
            </html>
