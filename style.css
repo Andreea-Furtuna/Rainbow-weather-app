@@ -1,10 +1,22 @@
 body {
   font-family: fantasy;
 }
+.container {
+  background-image: url(https://images.pexels.com/photos/3551227/pexels-photo-3551227.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=400);
+  width: 50%;
+  font-size: larger;
+  color: black;
+}
+
+.temperature,
+.units {
+  font-size: 25px;
+  color: black;
+}
 
 header {
   color: lightseagreen;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   position: relative;
   top: 20px;
@@ -12,48 +24,63 @@ header {
   left: 10px;
   font-family: fantasy;
 }
+h3 {
+  font-size: 18px;
+}
+
+img {
+  width: 75%;
+  display: block;
+}
+
+.search-current {
+  display: block;
+  text-align: center;
+}
+.city-temp-description {
+  display: block;
+  text-align: center;
+}
+.weather-forecast {
+  font-size: smaller;
+}
 
 ul,
 li {
   list-style-type: none;
+  display: block;
   text-align: center;
+  color: #1dbde5;
+  padding: 0;
 }
 
+h1,
 h2 {
   color: black;
-  font-size: 15px;
-  font-family: fantasy;
-}
-
-p {
-  color: darkmagenta;
-  border: 10px;
-  padding: 5px 5px 5px 5px;
-  font-family: fantasy;
-  font-size: 20px;
-  margin-left: -20px;
+  font-size: 25px;
+  text-align: center;
 }
 
 em {
   font-size: 50px;
 }
 
-.temperature {
-  font-size: 30px;
+button,
+.enter,
+.paris {
+  border: aqua;
+  border-radius: 10px;
+  color: #757575;
 }
-
-.word {
-  font-size: 30px;
-}
-
-.rainbow,
-.clouds {
-  position: absolute;
-  margin: -170px 10px 80px 500px;
+button:hover,
+.enter:hover {
+  background-color: white;
 }
 
 .description {
-  color: blue;
+  color: #1dbde5;
+  display: block;
+  text-align: center;
   font-size: larger;
   font-family: fantasy;
 }
@@ -64,6 +91,9 @@ em {
 .active:hover {
   text-decoration: none;
 }
-.container {
-  background-image: url(https://images.pexels.com/photos/3551227/pexels-photo-3551227.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+
+.source-code {
+  font-size: larger;
+  display: block;
+  text-align: center;
 }
