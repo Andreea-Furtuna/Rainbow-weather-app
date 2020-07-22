@@ -16,123 +16,57 @@
 
 <body>
     <div class="container">
+        <div class="weather-app">
         <header id="city">
-            <div class="shadow p-3 mb-5 bg-white rounded">
                 What to be today... sunglasses ☀︎ or the umbrella ☂︎ ?
-            </div>
-        </header>
-        <br />
-        <div class="row">
-            <div class="col-6">
+                <h2 id="date" class="word">
+                </h2> 
+        </header> 
+        <br/>
+        <br/>
+        <div class="row city-temp-description">
+            <div class="col-4">
                 <h1 id="cityTemp">
                     <em></em>
                 </h1>
-                <h2 id="date" class="word">
-                </h2>
-            </div>
-        </div>
-        <div class="float-left">
-            <span class="temperature" id="temperature"></span>
-            <span class="units"> <a href="#" id="celsius-link" class="active"><strong>°C</strong> </a> |<a href="#"
-                    id="fahrenheit-link"> <strong>°F </strong></a> </span>
-        </div>
-        <br />
-        <div class="col-3">
-            <form class="search-form" id="search-form">
-                Type your city here →
-                <input type="text" placeholder="Enter your city" class="paris" id="city-input" />
-                <input type="submit" value="search" class="enter" />
-        </div>
-        <div class="col-6">
-            <button id="current-location-button">Current</button></div>
-    </div>
-    <div class="row weather-description">
-        <div class="col-4">
-            <ul>
-                <li id="description" class="description"></li>
-            </ul>
-                <div class="col-4">
-                    <ul>
-                <li>Humidity:<span id="humidity"></span>%</li>
-                    </ul>
-                </div>
-                <div class="col-4">
-                    <ul>
-                <li>Wind:<span id="wind"></span>km/h</li>
+                <ul>
+                    <li id="description" class="description"></li>
                 </ul>
+                <div class="float-left">
+                    <span class="temperature" id="temperature"></span>
+                    <span class="units"> <a href="#" id="celsius-link" class="active"><strong>°C</strong> </a> |<a href="#"
+                            id="fahrenheit-link"> <strong>°F </strong></a> </span>
                 </div>
             </div>
-        </div>
-        <br />
-        </form>
-        <div class="row">
-            <div class="col">
-                <div class="card1">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Sunday 14June
-                        </p>
-                        <ul>
-                            <li>22°C⛅</li>
-                        </ul>
+                    <form class="search-form" id="search-form">
+                        <input type="text" placeholder="Enter your city" class="paris" id="city-input" />
+                        <input type="submit" value="search" class="enter" />
+                          
+                    <ul>
+                        <li>Humidity:<span id="humidity"></span>%</li>
+                        <li>Wind:<span id="wind"></span>km/h</li>
+                    </ul>
+                    </form>
+                    <div class="col-2">
+                        <button id="current-location-button">Current</button></div>
                     </div>
-                </div>
-            </div>
             <div class="row">
-                <div class="col">
-                    <div class="card2">
-                        <div class="card-body">
-                            <p class="card-text">
-                                Monday 15June
-                            </p>
-                            <ul>
-                                <li>19°C⛅</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="card3">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Tuesday 16June
-                                </p>
-                                <ul>
-                                    <li>19°C🌧️</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="card4">
-                                <div class="card-body">
-                                    <p class="card-text">
-                                        Wednesday 17June
-                                    </p>
-                                    <ul>
-                                        <li>20°C🌧️</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="card5">
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                            Thursday 18June
-                                        </p>
-                                        <ul>
-                                            <li>20°C⛅</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                </div>
-                                </div>
+    <div class="row weather-forecast" id="forecast">
+    </div>
+    </div>
+    </div>
+    </div>
 </div>
-                            </div>
-                            <script src="index.js"></script>
-                            </body>
+    </div>
+    <script src="index.js"></script>
+    </div>
+    </div>
+   
+    <small class="source-code">
+        <a href="https://github.com/Andreea-Furtuna/Rainbow-weather-app" target="_blank">Open-source code</a>, created
+        by Andreea Furtuna
+    </small> 
+    </div>
+    </div>
+       </body>
            </html>
